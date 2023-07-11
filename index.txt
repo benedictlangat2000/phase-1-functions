@@ -1,0 +1,51 @@
+//Define abstraction 
+Abstraction comes from Latin roots which mean "to pull away." It's the "take-away" or "impression" of a whole thing. 
+Abstractions are used to make it easier to shorten our sentences 
+
+//Explain that functions are abstractions
+Functions combine a series of steps under a new name. That's why they're abstractions.
+
+//Explain how to call a function
+To "execute" or "call" a function in JavaScript you add () after its name. 
+
+//Define "Generalization"
+The process of moving from concrete to abstract.
+
+//Demonstrate "Generalization" by using parameters and arguments
+Let's make exerciseCowTheJersey() more general. Looking at the console.log() statements, we repeatedly refer to a cow's name and a cows's breed.
+ Both of these are Strings. If we were to write them as JavaScript variables inside the function we might write dogName and cowBreed.
+
+Let's use String interpolation to generalize the body of our function
+
+function exerciseAsherTheJersey() {
+  const cowName = "Asher";
+  const cowBreed = "Jersey";
+  console.log(`Wake ${cowName} the ${cowBreed}`);
+  console.log(`Leash ${cowName} the ${cowBreed}`);
+  console.log(`Walk to the farm ${cowName} the ${cowBreed}`);
+  console.log(`Bring dairy meal for ${cowName} the ${cowBreed}`);
+  console.log(`Walk home with ${cowName} the ${cowBreed}`);
+  console.log(`Unleash ${cowName} the ${cowBreed}`);
+}
+When the function is called, it assigns cowName = "Asher" and cowBreed = "Asher". The parameters are usable inside the function body as if they 
+had been set with const inside the function.
+
+//Demonstrate return values
+
+const weatherToday = "Sunny";
+
+function exerciseCow(cowName, cowBreed) {
+  if (weatherToday === "Sunny") {
+    return `${cowName} did not exercise due to rain`;
+  }
+  console.log(`Wake ${cowName} the ${cowBreed}`);
+  console.log(`Leash ${cowName} the ${cowBreed}`);
+  console.log(`Walk to the farm ${cowName} the ${cowBreed}`);
+  console.log(`Bring dairy meal for ${cowName} the ${cowBreed}`);
+  console.log(`Walk home with ${cowName} the ${cowBreed}`);
+  console.log(`Unleash ${cowName} the ${cowBreed}`);
+  return `${cowName} is happy and tired!`;
+}
+
+const result = exerciseCow("Asher", "Jersey");
+console.log(result);
